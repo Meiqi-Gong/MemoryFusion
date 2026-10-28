@@ -1,4 +1,4 @@
-# MemoryFusion
+<h1 align="center">MemoryFusion: Cross-Temporal Memory Learning for Multimodal Video Fusion</h1>
 
 This repository contains the training and evaluation code for **MemoryFusion**.
 
