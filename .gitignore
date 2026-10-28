@@ -1,0 +1,24 @@
+# Local data, weights and generated artifacts
+/datasets/
+/checkpoints/
+/results/
+/logs/
+/eval_logs/
+/outputs/
+/work/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.log
+events.out.tfevents.*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.vscode/
+.idea/
+.env
+.env.local
+.DS_Store
+Thumbs.db
