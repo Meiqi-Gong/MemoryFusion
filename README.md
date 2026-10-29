@@ -6,8 +6,6 @@
 
 🎉 **Accepted to NeurIPS 2026!**
 
-Training and evaluation code for **MemoryFusion**.
-
 </div>
 
 ---
