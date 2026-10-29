@@ -4,6 +4,8 @@
 
 ### Cross-Temporal Memory Learning for Multimodal Video Fusion
 
+🎉 **Accepted to NeurIPS 2026!**
+
 Training and evaluation code for **MemoryFusion**.
 
 </div>
