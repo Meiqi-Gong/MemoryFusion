@@ -137,48 +137,6 @@ CUDA_VISIBLE_DEVICES=0 python tools/train.py \
   --pretrained_path checkpoints/stage1.pth
 ```
 
-### ⚙️ Useful Training Options
-
-| Option | Description |
-| :--- | :--- |
-| `--total_step` | Sets the total number of training iterations. |
-| `--workers 0` | Disables multiprocessing for data loading. |
-| `--no_amp` | Disables automatic mixed-precision training. |
-| `--val_step 0` | Disables validation during training. |
-
-**📁 Output locations**
-
-| Artifact | Path |
-| :--- | :--- |
-| 🏋️ Training outputs | `results/<experiment>/<stage>/` |
-| 📜 Logs | `logs/` |
-
-<a id="resume-training"></a>
-## 🔄 Resume Training
-
-New-format checkpoints store everything needed to resume training state:
-
-- 🧩 Model parameters
-- ⚙️ Optimizer state
-- ⚡ AMP scaler state
-- 🔢 Training step
-- 📈 EMA state
-- 🎲 Random-number-generator state
-
-Resume with `--resume_path`:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python tools/train.py \
-  --stage stage1 \
-  --resume_path results/memoryfusion_R50_AOTL_Temp_pe_Slot_4/stage1/ckpt/latest_stage1.pth
-```
-
-> 🕰️ **Legacy checkpoint:** Older checkpoints do not contain `next_step`. When resuming from one, also specify `--resume_step <step>`.
-
-> ⚠️ **Important notes**
-> - Resumed training restarts the data-loading epoch, so sample order may differ from an uninterrupted run.
-> - Stage-2 resume training still requires the corresponding Stage-1 checkpoint.
-> - EMA-exported checkpoints are intended for **inference only**.
 
 <a id="evaluation"></a>
 ## 📊 Evaluation
